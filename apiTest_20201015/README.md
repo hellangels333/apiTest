@@ -1,17 +1,17 @@
 ## 0.运行方式
-1.命令行运行 python -m pytest tests/test_ApiTest/test_lagou.py --html=report.html
-2.命令行运行 pytest tests/test_ApiTest/test_lagou.py --html=report.html
-3.有main.py直接 python main.py，格式参考上面（重难点是加各种参数）
+1. 命令行运行 python -m pytest tests/test_ApiTest/test_lagou.py --html=report.html
+2. 命令行运行 pytest tests/test_ApiTest/test_lagou.py --html=report.html
+3. 有main.py直接 python main.py，格式参考上面（重难点是加各种参数）
 
 ## 1.pytest一些操作
-1.指定运行特定的方法,在命令行运行  pytest test_lagou.py::TestLaGou::test_get_new_message
-2.加标签（装饰器)，在run时跳过等
+1. 指定运行特定的方法,在命令行运行  pytest test_lagou.py::TestLaGou::test_get_new_message
+2. 加标签（装饰器)，在run时跳过等
      @pytest.mark.smoke
      Class Sample:
          pass
-3.指定测试目录 testpath = path
-4.指定忽略某些目录
-5.禁用XPASS
+3. 指定测试目录 testpath = path
+4. 指定忽略某些目录
+5. 禁用XPASS
 
 ## 2.pytest搜索测试用例的原则：
 - 搜索由任何符合以下规则的文件 test_*.py 或 *_test.py 文件。
@@ -42,10 +42,10 @@ class Sample(object):
  
  ## 5.测试报告
  ### pytest-html
- 1.安装 pip install pytest-html
- 2.在命令行运行 python -m pytest tests/test_ApiTest/test_lagou.py --html=report.html --reruns 2
+ 1. 安装 pip install pytest-html
+ 2. 在命令行运行 python -m pytest tests/test_ApiTest/test_lagou.py --html=report.html --reruns 2
  ### allure
- 1.安装allure https://blog.csdn.net/chenfei_5201213/article/details/80982929
+ 1. 安装allure https://blog.csdn.net/chenfei_5201213/article/details/80982929
  2. 在命令行运行 pytest --alluredir=./allure_reports
  3. 在main文件中 运行标记“smoke”的用例 pytest.main(["-m", "smoke", "--alluredir=./allure_reports"])
  4. 修改allure中文乱码
